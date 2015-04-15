@@ -1,9 +1,9 @@
 {
-  "name": "angularjs-boilerplate-snippets",
-  "version": "0.2.5",
+  "name": "angularjs-boilerplate-snippets-mod",
+  "version": "0.0.1",
   "main": "./lib/angularjs-boilerplate-snippets.coffee",
-  "description": "Adds AngularJS boilerplate snippets from best practices for single responsibility in Atom.",
-  "repository": "https://github.com/justinblough/Atom-AngularJS-Boilerplate-Snippets",
+  "description": "Adds AngularJS boilerplate snippets from best practices for single responsibility in Atom. A fork of Justin Blough's original package.",
+  "repository": "https://github.com/gregdaynes/Atom-AngularJS-Boilerplate-Snippets",
   "readmeFilename": "README.md",
   "license": "MIT",
   "engines": {
