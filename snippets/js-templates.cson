@@ -209,3 +209,33 @@
 
             })();
         """
+
+    "Angular Directive":
+        "prefix": "angroute"
+        "body": """
+            (function() {
+                'use strict';
+
+                angular
+                    .module('${1:app}', [])
+                    .config(stateProvider);
+
+                function stateProvider($stateProvider){
+                    $stateProvider
+                        .state('${2:app.component}', {
+                            url: '/${3:url}',
+                            fluid: ${4:true},
+                            pageTitle: '${5:Component Title}',
+                            views: {
+                                '${6:view}': {
+                                    templateUrl: '${7:template}',
+                                    controller: '${8:controller}',
+                                    controllerAs: '${9:vm}'
+                                },
+                            }
+                        });
+
+                }
+
+            })();
+        """
