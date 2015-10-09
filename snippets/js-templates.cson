@@ -3,18 +3,18 @@
         "prefix": "angapp"
         "body":"""
             (function() {
-                'use strict';
+            'use strict';
 
-                angular.module('${1:app}', [
-                    // Angular modules
-                    $1
+            angular.module('${1:app}', [
+                // Angular modules
+                $1
 
-                    // Reusable cross app code modules
-                    $2
+                // Reusable cross app code modules
+                $2
 
-                    // 3rd Party modules
-                    $3
-                ]);
+                // 3rd Party modules
+                $3
+            ]);
 
             })();
         """
@@ -23,9 +23,9 @@
         "prefix": "angmod"
         "body": """
             (function() {
-                'use strict';
+            'use strict';
 
-                angular.module('${1:module}', [$2]);
+            angular.module('${1:module}', [$2]);
 
             })();
         """
@@ -33,11 +33,11 @@
         "prefix": "angconst"
         "body": """
             (function() {
-                'use strict';
+            'use strict';
 
-                angular
-                    .module('${1:app}')
-                    .constant('${2:myConstant}', ${3:'value'})$4;
+            angular
+                .module('${1:app}')
+                .constant('${2:myConstant}', ${3:'value'})$4;
 
             })();
         """
@@ -46,28 +46,28 @@
         "prefix": "angcon"
         "body": """
             (function() {
-                'use strict';
+            'use strict';
 
-                angular
-                    .module('${1:app}')
-                    .controller('${2:Controller}',${2: Controller});
+            angular
+                .module('${1:app}')
+                .controller('${2:Controller}',${2: Controller});
 
-                    ${2:MyController}.$inject = [${3:'$scope'}];
+            ${2:MyController}.$inject = [${3:'$scope'}];
 
-                function ${2:MyController}(${3:$scope}){
+            function ${2:MyController}(${3:$scope}){
 
-                    /*jshint validthis: true */
-                    var vm = this;
+                /*jshint validthis: true */
+                var vm = this;
 
-                    activate();
+                activate();
 
-                    ////////////////////////////////
+                ////////////////////////////////
 
-                    function activate(){
-
-                    }
+                function activate(){
 
                 }
+
+            }
 
             })();
         """
@@ -76,29 +76,29 @@
         "prefix": "angfact"
         "body": """
             (function() {
-                'use strict';
+            'use strict';
 
-                angular
-                    .module('${1:app}')
-                    .factory('${2:factory}', ${2:factory});
+            angular
+                .module('${1:app}')
+                .factory('${2:factory}', ${2:factory});
 
-                ${2:factory}.$inject = [${3:'$http'}];
+            ${2:factory}.$inject = [${3:'$http'}];
 
-                function ${2:factory}(${3:$http}){
+            function ${2:factory}(${3:$http}){
 
-                    var service = {
-                        ${4:getIndex}: ${4:getIndex}
-                    };
+                var service = {
+                    ${4:getIndex}: ${4:getIndex}
+                };
 
-                    return service;
+                return service;
 
-                    ////////////////////////////////
+                ////////////////////////////////
 
-                    function ${4:getIndex}(){
-                        $5
-                    }
-
+                function ${4:getIndex}(){
+                    $5
                 }
+
+            }
 
             })();
         """
@@ -108,21 +108,21 @@
         "prefix": "angserv"
         "body": """
             (function() {
-                'use strict';
+            'use strict';
 
-                angular
-                    .module('${1:app}')
-                    .service('${2:dataService}', ${2:dataService});
+            angular
+                .module('${1:app}')
+                .service('${2:dataService}', ${2:dataService});
 
-                ${2:DataService}.$inject = [${3:'$http'}];
+            ${2:DataService}.$inject = [${3:'$http'}];
 
-                function ${2:dataService}(${3:$http}){
+            function ${2:dataService}(${3:$http}){
 
-                    this.${4:getIndex} = function(){
-                        $5
-                    }
-
+                this.${4:getIndex} = function(){
+                    $5
                 }
+
+            }
 
             })();
         """
@@ -131,32 +131,32 @@
         "prefix": "angdir"
         "body": """
             (function() {
-                'use strict';
+            'use strict';
 
-                angular
-                    .module('${1:app}')
-                    .directive('${2:directive}', ${2:directive});
+            angular
+                .module('${1:app}')
+                .directive('${2:directive}', ${2:directive});
 
-                ${2:directive}.$inject = [${3:'dataService'}];
+            ${2:directive}.$inject = [${3:'dataService'}];
 
-                function ${2:directive}(${3:dataService}){
-                    // Usage: ...
-                    var directive = {
-                        restrict: '${4:ACE}',
-                        templateUrl: '${4:templateUrl}',
-                        scope: {
-                        },
-                        link: link
-                    };
-                    return directive;
+            function ${2:directive}(${3:dataService}){
+                // Usage: ...
+                var directive = {
+                    restrict: '${4:ACE}',
+                    templateUrl: '${4:templateUrl}',
+                    scope: {
+                    },
+                    link: link
+                };
+                return directive;
 
-                    ////////////////////////////////
+                ////////////////////////////////
 
-                    function link(scope, element, attrs){
-
-                    }
+                function link(scope, element, attrs){
 
                 }
+
+            }
 
             })();
         """
@@ -165,47 +165,47 @@
         "prefix": "angdirc"
         "body": """
             (function() {
-                'use strict';
+            'use strict';
 
-                angular
-                    .module('${1:app}')
-                    .directive('${2:directive}', ${2:directive});
+            angular
+                .module('${1:app}')
+                .directive('${2:directive}', ${2:directive});
 
-                function ${2:directive}(){
-                    // Usage: ...
-                    var directive = {
-                        restrict: '${3:ACE}',
-                        templateUrl: '${4:templateUrl}',
-                        scope: {
-                        },
-                        link: link,
-                        controller: '${5:Controller}',
-                        controllerAs: 'vm',
-                        bindToController: true
-                    };
-                    return directive;
+            function ${2:directive}(){
+                // Usage: ...
+                var directive = {
+                    restrict: '${3:ACE}',
+                    templateUrl: '${4:templateUrl}',
+                    scope: {
+                    },
+                    link: link,
+                    controller: '${5:Controller}',
+                    controllerAs: 'vm',
+                    bindToController: true
+                };
+                return directive;
 
-                    ////////////////////////////////
+                ////////////////////////////////
 
-                    function link(scope, element, attrs, ctrl){
-
-                    }
+                function link(scope, element, attrs, ctrl){
 
                 }
 
-                ${5:Controller}.$inject = ['${6:dataService}'];
+            }
 
-                function ${5:Controller}(${6:dataService}) {
-                    var vm = this;
+            ${5:Controller}.$inject = ['${6:dataService}'];
 
-                    activate();
+            function ${5:Controller}(${6:dataService}) {
+                var vm = this;
 
-                    ////////////////////////////////
+                activate();
 
-                    function activate() {
+                ////////////////////////////////
 
-                    }
+                function activate() {
+
                 }
+            }
 
             })();
         """
@@ -214,28 +214,28 @@
         "prefix": "angroute"
         "body": """
             (function() {
-                'use strict';
+            'use strict';
 
-                angular
-                    .module('${1:app}', [])
-                    .config(stateProvider);
+            angular
+                .module('${1:app}', [])
+                .config(stateProvider);
 
-                function stateProvider($stateProvider){
-                    $stateProvider
-                        .state('${2:app.component}', {
-                            url: '/${3:url}',
-                            fluid: ${4:true},
-                            pageTitle: '${5:Component Title}',
-                            views: {
-                                '${6:view}': {
-                                    templateUrl: '${7:template}',
-                                    controller: '${8:controller}',
-                                    controllerAs: '${9:vm}'
-                                },
-                            }
-                        });
+            function stateProvider($stateProvider){
+                $stateProvider
+                    .state('${2:app.component}', {
+                        url: '/${3:url}',
+                        fluid: ${4:true},
+                        pageTitle: '${5:Component Title}',
+                        views: {
+                            '${6:view}': {
+                                templateUrl: '${7:template}',
+                                controller: '${8:controller}',
+                                controllerAs: '${9:vm}'
+                            },
+                        }
+                    });
 
-                }
+            }
 
             })();
         """
